@@ -1,0 +1,215 @@
+.map {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.09);
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  background: linear-gradient(135deg, #f4f1ea, #f9f7f2);
+  color: var(--ink-3);
+  border-radius: 18px;
+  font-size: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.popupImageWrap {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #eae7df, #f7f3ee);
+}
+
+.popupImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.popupPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  background: linear-gradient(135deg, #eef3ee, #f8f5f1);
+}
+
+.popupBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 12px 10px;
+}
+
+.transactionBadge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(25, 118, 89, 0.08);
+  color: #1c6a52;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.popupTitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1f2937;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceRow {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--olive);
+}
+
+.locationRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5b6472;
+  font-size: 12px;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  color: #475569;
+  font-size: 11px;
+}
+
+.metaRow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.viewLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--olive), #2b7a67);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.viewLink:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(34, 97, 79, 0.2);
+}
+
+:global(.leaflet-container) {
+  background: #edf4ef;
+  font-family: var(--font-body);
+}
+
+:global(.leaflet-popup-content-wrapper) {
+  border-radius: 16px;
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.14);
+  padding: 0;
+}
+
+:global(.leaflet-popup-content) {
+  margin: 0;
+  width: 260px !important;
+}
+
+:global(.leaflet-popup-tip) {
+  background: white;
+}
+
+:global(.leaflet-popup-close-button) {
+  top: 10px !important;
+  right: 10px !important;
+  color: #fff !important;
+  background: rgba(15, 23, 42, 0.35) !important;
+  border-radius: 999px !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 24px !important;
+  font-size: 14px !important;
+}
+
+:global(.leaflet-div-icon.dari-map-marker) {
+  background: transparent;
+  border: none;
+  transform: scale(1.05);
+}
+
+:global(.leaflet-div-icon.dari-map-marker span) {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1d7a67 0%, #0f584a 100%);
+  border: 4px solid rgba(255, 255, 255, 0.96);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(29, 122, 103, 0.18), 0 12px 22px rgba(15, 88, 74, 0.28);
+}
+
+:global(.leaflet-div-icon.dari-map-marker span::after) {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+:global(.leaflet-div-icon.dari-map-marker-active span) {
+  background: linear-gradient(135deg, #d97d43 0%, #ba5d2c 100%);
+  box-shadow: 0 0 0 5px rgba(217, 125, 67, 0.18), 0 14px 24px rgba(186, 93, 44, 0.36);
+}
+
+:global(.leaflet-div-icon.dari-map-marker-active span::after) {
+  background: rgba(255, 255, 255, 0.28);
+}

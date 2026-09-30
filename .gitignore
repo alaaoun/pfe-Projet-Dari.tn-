@@ -1,0 +1,26 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/coverage/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Runtime data and logs
+**/logs/
+**/tmp/
+**/uploads/
+*.log
+dari-tn-fullstack/seed_run_output.txt
+new_pg_hba.conf
+temp_modify_pg_hba.ps1
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/

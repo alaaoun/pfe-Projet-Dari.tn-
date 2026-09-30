@@ -1,0 +1,177 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--olive);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+}
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+.logo span { color: var(--olive-4); }
+
+.links {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.link {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  transition: all 0.15s;
+}
+.link:hover, .link.active {
+  color: white;
+  background: rgba(255,255,255,0.1);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.iconBtn {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.8);
+  border-radius: var(--r-sm);
+  transition: all 0.15s;
+}
+.iconBtn:hover { background: rgba(255,255,255,0.1); color: white; }
+
+.loginBtn {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: var(--r-sm);
+  transition: all 0.15s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.loginBtn:hover { background: rgba(255,255,255,0.08); color: white; }
+
+.publishBtn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--terra);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--r-sm);
+  transition: all 0.18s;
+}
+.publishBtn:hover {
+  background: var(--terra-2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(196,98,45,0.35);
+}
+
+/* User dropdown */
+.userMenu { position: relative; }
+.userBtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px;
+  border-radius: var(--r-md);
+  transition: background 0.15s;
+  color: rgba(255,255,255,0.9);
+}
+.userBtn:hover { background: rgba(255,255,255,0.1); }
+.avatar {
+  width: 32px; height: 32px;
+  background: var(--olive-4);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+}
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border: 1px solid var(--sand-2);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  min-width: 220px;
+  overflow: hidden;
+  animation: fadeUp 0.2s var(--ease-out) both;
+}
+.dropHeader {
+  padding: 14px 16px;
+  background: var(--sand);
+  border-bottom: 1px solid var(--sand-2);
+}
+.dropHeader strong { display: block; font-size: 14px; color: var(--ink); margin-bottom: 2px; }
+.dropHeader span   { font-size: 12px; color: var(--ink-3); }
+.dropItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--ink-2);
+  width: 100%;
+  text-align: left;
+  transition: background 0.12s;
+}
+.dropItem:hover { background: var(--sand); color: var(--ink); }
+.dropDivider { height: 1px; background: var(--sand-2); margin: 4px 0; }
+.dropLogout { color: var(--terra) !important; }
+.dropLogout:hover { background: var(--terra-light) !important; }
+
+/* Mobile */
+.mobileToggle {
+  display: none;
+  color: white;
+  padding: 6px;
+  border-radius: var(--r-sm);
+}
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background: var(--olive);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 24px 20px;
+  gap: 4px;
+  animation: fadeIn 0.2s ease both;
+}
+.mobileLink {
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  text-align: left;
+}
+.mobileLink:last-child { border-bottom: none; }
+.mobileLogout { color: var(--terra-2) !important; }
+
+@media (max-width: 768px) {
+  .links, .loginBtn, .publishBtn, .iconBtn { display: none; }
+  .mobileToggle { display: flex; }
+}

@@ -1,0 +1,102 @@
+.wrap {
+  background: var(--white-pure);
+  border-bottom: 1px solid var(--sand-2);
+  padding: 12px 24px;
+  position: sticky;
+  top: 64px;
+  z-index: 80;
+  box-shadow: var(--shadow-sm);
+}
+.row, .row2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.row2 {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--sand-2);
+}
+.select {
+  border: 1px solid var(--sand-3);
+  border-radius: var(--r-sm);
+  padding: 7px 28px 7px 12px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--ink-2);
+  background: white url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236A6A62' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 8px center;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.select:focus { outline: none; border-color: var(--olive-3); }
+
+.input {
+  border: 1px solid var(--sand-3);
+  border-radius: var(--r-sm);
+  padding: 7px 12px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  width: 130px;
+  transition: border-color 0.15s;
+}
+.input:focus { outline: none; border-color: var(--olive-3); }
+.input::placeholder { color: var(--ink-4); }
+
+.priceRange {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-4);
+  font-size: 13px;
+}
+
+.moreBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--sand-3);
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--ink-2);
+  background: white;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.moreBtn:hover { border-color: var(--olive-3); color: var(--olive); background: var(--olive-light); }
+
+.clearBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  background: var(--terra-light);
+  border: 1px solid var(--terra-2);
+  border-radius: var(--r-sm);
+  font-size: 12px;
+  font-family: var(--font-body);
+  color: var(--terra);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.clearBtn:hover { background: var(--terra); color: white; }
+
+.checks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+.check input { accent-color: var(--olive); width: 15px; height: 15px; cursor: pointer; }
